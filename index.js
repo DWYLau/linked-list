@@ -1,7 +1,7 @@
-import LinkedList from "./linkedlist.js";
+const LinkedList = require("./linkedlist.js");
 
 const list = new LinkedList();
-list.prepend(10);
 list.prepend(20);
+list.prepend(30);
 
-console.dir(list, { depth: null });
+console.log(JSON.stringify(list, null, 3));
