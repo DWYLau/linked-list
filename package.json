@@ -19,5 +19,6 @@
   "homepage": "https://github.com/DWYLau/linked-list#readme",
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "code-runner.runInTerminal": "true"
 }
