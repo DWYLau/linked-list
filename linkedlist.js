@@ -47,12 +47,34 @@ class LinkedList {
     }
   }
 
-  atIndex(index) {
-    let values = Object.values(this.head);
-    console.log(values);
-    let filterValues = values.filter(Number);
-    console.log(filterValues);
-    return values[index];
+  pop() {
+    if (this.head === null) {
+      return;
+    } else {
+      let tail = this.head;
+      while (tail.nextNode.nextNode) {
+        tail = tail.nextNode;
+      }
+      tail.nextNode = null;
+      this.length--;
+      return tail;
+    }
+  }
+
+  contains(value) {
+    let temp = this.head;
+    if (temp.value === value) {
+      return true;
+    } else {
+      while (temp) {
+        temp = temp.nextNode;
+        if (temp.value === value) {
+          return true;
+        } else if (temp.nextNode === null) {
+          return false;
+        }
+      }
+    }
   }
 }
 

@@ -50,3 +50,26 @@ describe("#findTail", () => {
     expect(list.findTail()).toBe(30);
   });
 });
+
+describe("#pop", () => {
+  test("removes element at the end of the list", () => {
+    const list = LinkedList.fromValues(10, 20, 30);
+    list.pop();
+
+    expect(list.length).toBe(2);
+  });
+});
+
+describe("#contains", () => {
+  test("returns true if list contains value", () => {
+    const list = LinkedList.fromValues(10, 20, 30);
+
+    expect(list.contains(20)).toBe(true);
+  });
+
+  test("returns false if list does not contain value", () => {
+    const list = LinkedList.fromValues(10, 20, 30);
+
+    expect(list.contains(40)).toBe(false);
+  });
+});
